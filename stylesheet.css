@@ -1,3 +1,59 @@
+* {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 100px;
+  grid-template-columns: 100px 100px 100px;
+}
+
+/* Header */
+.header {
+  grid-column: 1 / span 2;
+}
+
+/* Image */
+.img {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+
+/* Container */
+.container {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+.pink-text {
+  color: hsl(0, 36%, 70%);
+}
+
+.bold-text {
+  color: hsl(0, 6%, 24%);
+  font-weight: 600;
+}
+
+.secondary-text {
+  color: hsl(0, 36%, 70%);
+  font-weight: 400;
+}
+
+#form {
+  flex-direction: row;
+  border: 0.04em solid hsl(0, 36%, 70%);
+  border-radius: 50px;
+  padding: 5px;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
