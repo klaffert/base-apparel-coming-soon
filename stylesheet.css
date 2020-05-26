@@ -74,7 +74,11 @@ header {
   justify-content: space-between;
 }
 
+<<<<<<< HEAD
 input[type='text'],
+=======
+input[type='email'],
+>>>>>>> 5df0dd37354419d1caf355978eb8be39cc5afef9
 .gradient-button {
   background: rgba(0, 0, 0, 0);
   border: none;
@@ -82,10 +86,21 @@ input[type='text'],
   display: flex;
 }
 
+<<<<<<< HEAD
 input[type='text'] {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 0.8rem;
   padding-left: 1.5rem;
+=======
+input[type='email'] {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.8rem;
+  padding-left: 1.5rem;
+}
+
+input[type='email']:invalid:not(:focus):not(:placeholder-shown) {
+  background: red;
+>>>>>>> 5df0dd37354419d1caf355978eb8be39cc5afef9
 }
 
 ::placeholder {
