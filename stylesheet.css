@@ -5,11 +5,6 @@
 }
 
 body {
-  background-image: linear-gradient(
-    135deg,
-    hsl(0, 100%, 95%),
-    hsl(0, 0%, 100%)
-  );
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1rem;
   margin: 0;
@@ -29,12 +24,14 @@ header {
   padding: 35px;
 }
 
-.hero {
+/* Content */
+#primary {
+  display: flex;
 }
 
-/* Content */
 .primary-content {
   text-align: center;
+  background-image: url('./images/bg-pattern-desktop.svg');
 }
 
 .section-title {
@@ -65,47 +62,51 @@ header {
 /* Form */
 
 #form {
-  border: 0.04em solid hsl(0, 36%, 70%);
-  border-radius: 50px;
-  display: flex;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 90px;
-  justify-content: space-between;
+  border: 3px solid rgba(0, 0, 0, 0);
 }
 
-<<<<<<< HEAD
-input[type='text'],
-=======
-input[type='email'],
->>>>>>> 5df0dd37354419d1caf355978eb8be39cc5afef9
-.gradient-button {
-  background: rgba(0, 0, 0, 0);
-  border: none;
-  outline: none;
-  display: flex;
+input {
+  width: 27.5rem;
+  height: 3.5rem;
+  border-radius: 35px;
+  padding: 5px 30px;
+  border: 1px solid hsl(0, 36%, 70%);
+  color: black;
+  opacity: 0.4;
+  font-size: 1rem;
 }
 
-<<<<<<< HEAD
-input[type='text'] {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 0.8rem;
-  padding-left: 1.5rem;
-=======
-input[type='email'] {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 0.8rem;
-  padding-left: 1.5rem;
-}
-
-input[type='email']:invalid:not(:focus):not(:placeholder-shown) {
-  background: red;
->>>>>>> 5df0dd37354419d1caf355978eb8be39cc5afef9
-}
-
-::placeholder {
+input::placeholder {
   color: hsl(0, 36%, 70%);
+  font-size: 1rem;
+  font-family: 'Josefin Sans', sans-serif;
   letter-spacing: 0.1em;
+}
+
+input:focus {
+  outline: none;
+}
+
+.errorMessage {
+  text-align: center;
+  display: none;
+}
+
+form.error .errorMessage {
+  display: block;
+}
+
+form.error .inputError {
+  border: 1px solid red;
+}
+
+.errorIcon {
+  visibility: hidden;
+  transform: translate(-130px, 5px);
+}
+
+form.error .errorIcon {
+  visibility: visible;
 }
 
 /* Button */
@@ -113,10 +114,14 @@ input[type='email']:invalid:not(:focus):not(:placeholder-shown) {
   background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   border-radius: 50px;
   padding: 15px 35px;
+  border: none;
+  transform: translate(-120px, 4px);
 }
 
 .gradient-button:hover {
-  background-image: linear-gradient(135deg, hsl(0, 100%, 90%), hsl(0, 0%, 95%));
-  cursor: pointer;
-  transform: scale(1.1);
+  opacity: 0.6;
+}
+
+.gradient-button:focus {
+  outline: none;
 }

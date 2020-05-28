@@ -1,30 +1,20 @@
-<<<<<<< HEAD
-// const button = document.querySelector('.gradient-button');
+let form = document.getElementById('form');
+let email = document.getElementById('email');
 
-// function validateEmail() {
-//   var emailText = document.getElementById('email').value;
-//   var pattern = /^[a-zA-Z0-9\-_]+(\.[a-zA-Z0-9\-_]+)*@[a-z0-9]+(\-[a-z0-9]+)*(\.[a-z0-9]+(\-[a-z0-9]+)*)*\.[a-z]{2,4}$/;
-//   if (pattern.test(emailText)) {
-//     return true;
-//   } else {
-//     alert('bad');
-//     return false;
-//   }
-// }
+form.addEventListener('submit', (e) => {
+  //This will prevent the page from reloading
+  e.preventDefault();
+  //Check if it's a valid email
+  let emailValue = email.value;
 
-// window.onload = function () {
-//   document.getElementById('form').onmouseover = validateEmail;
-// };
-=======
-// check validity of email
-function checkEmail() {
-  var email = document.getElementById('email');
-  var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-
-  if (!filter.test(email.value)) {
-    alert('Please provide a valid email address');
-    email.focus;
-    return false;
+  if (!validateEmail(emailValue)) {
+    form.classList.add('error');
+  } else {
+    form.classList.remove('error');
   }
+});
+
+function validateEmail(email) {
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
 }
->>>>>>> 5df0dd37354419d1caf355978eb8be39cc5afef9

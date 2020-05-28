@@ -23,26 +23,24 @@
     <img src="images/hero-mobile.jpg" alt="base apparel hero" />
   </section>
 
-  <section class="primary-content">
-    <h2 class="section-title">
-      <span class="pink-text">We're</span>
-      <br>
-      <span class="bold-text">coming<br>soon</span>
-    </h2>
-    <p class="section-text">Hello fellow shoppers! We're currently building our new fashion store.
-      Add your email below to stay up-to-date with announcements and our launch deals.</p>
-  </section>
-  <form id="form">
-<<<<<<< HEAD
-    <input id="email" type="text" placeholder="Email Address" required>
-    <button class="gradient-button">
-      <img src="images/icon-arrow.svg" alt="arrow" />
-=======
-    <input id="email" name="email" type="email" placeholder="Email Address" required>
-    <button class="gradient-button" onclick="checkEmail()" />
-    <img src="images/icon-arrow.svg" alt="arrow" />
->>>>>>> 5df0dd37354419d1caf355978eb8be39cc5afef9
-  </form>
+  <div id="primary">
+    <section class="primary-content">
+      <h2 class="section-title">
+        <span class="pink-text">We're</span>
+        <br>
+        <span class="bold-text">coming<br>soon</span>
+      </h2>
+      <p class="section-text">Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
+
+      <form id="form" novalidate>
+        <input id="email" name="email" type="email" placeholder="Email Address">
+        <img class="errorIcon" src="images/icon-error.svg" alt="error icon">
+        <button class="gradient-button"><img src=" images/icon-arrow.svg" alt="arrow" /></button>
+        <p class="errorMessage">Please provide a valid email</p>
+      </form>
+    </section>
+  </div>
 </body>
 <script src="index.js"></script>
 
